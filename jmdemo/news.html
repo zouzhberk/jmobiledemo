@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>news</title>
+  <link rel="stylesheet" href="./vender/styles/jquery.mobile-1.4.5.min.css">
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./vender/scripts/jquery.mobile-1.4.5.js"></script>
+  <script src="./vender/scripts/rx.all.js"></script>
+  <script src="./vender/scripts/rx.dom.js"></script>
+  <script src="./vender/scripts/doT.js"></script>
+  <script src="./vender/scripts/SHA1.js"></script>
+  <script src="./js/new.js"></script>
+</head>
+<body>
+<div class="container">
+  <div data-demo-html="true">
+    <script id="news-template" type="text/template">
+      <li class="ui-li-has-thumb">
+        <a name="itemlink" data-id="{{=it.id}}" href="./news-detail.html?{{=it.id}}"
+           class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <img src={{=it.img.url}}>
+
+          <h2>{{=it.title}}</h2>
+
+          <p>{{=it.summary}}</p></a>
+      </li>
+    </script>
+    <ul id="newslist" data-role="listview" data-inset="true"
+        class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+    </ul>
+  </div>
+</div>
+</body>
+</html>
